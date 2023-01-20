@@ -31,7 +31,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.comics.create');
     }
 
     /**
@@ -54,7 +54,8 @@ class ComicController extends Controller
         $new_record->type = $data['type'];
         $new_record->save();
 
-        return redirect()->route('comics.show', ['comic' => $new_record->id]);
+        return redirect()->route('comics.show',['comic
+        ' => $new_record->id]);
     }
 
     /**
@@ -101,6 +102,8 @@ class ComicController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comics = Comic::findOrFail($id);
+        $comics->delete();
+        return redirect()->route('comics.index')->with('success', "Hai cancellato con successo il fumetto: $comics->title");
     }
 }
