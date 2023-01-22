@@ -48,11 +48,11 @@
                         </button>
                     </form>
 
-                    {{-- <div>
-                        <a href="{{route('pastas.edit', $elem->id)}}">
+                    <div>
+                        <a href="{{route('comics.edit', $elem->id)}}">
                              <i class="fa-solid fa-pen"></i>
                         </a>
-                    </div> --}}
+                    </div>
                 </td>
             </tr>
         @endforeach
