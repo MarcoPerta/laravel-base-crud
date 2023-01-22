@@ -11,27 +11,29 @@
     
         <div class="mb-3">
             <label class="form-label">Titolo</label>
-            <input name="title" type="text" class="form-control" id="title">
+            <input name="title" type="text" class="form-control" id="title" value="{{ $comics->title }}">
         </div>
     
         <div class="mb-3">
             <label class="form-label">Descrizione</label>
-            <textarea name="description" class="form-control" id=""></textarea>
+            <textarea name="description" class="form-control" id="">
+                {{ $comics->description }}
+            </textarea>
         </div>
     
         <div class="mb-3">
             <label class="form-label">Prezzo</label>
-            <input name="price" type="text" class="form-control" id="title">
+            <input name="price" type="text" class="form-control" id="title" value="{{ $comics->price }}">
         </div>
     
         <div class="mb-3">
             <label class="form-label">Serie</label>
-            <input name="series" type="text" class="form-control" id="title">
+            <input name="series" type="text" class="form-control" id="title" value="{{ $comics->series }}">
         </div>
     
         <div class="mb-3">
             <label class="form-label">Tipo</label>
-            <input name="type" type="text" class="form-control" id="title">
+            <input name="type" type="text" class="form-control" id="title" value="{{ $comics->type }}">
         </div>
     
         <button type="submit" class="btn btn-primary">Modifica</button>
